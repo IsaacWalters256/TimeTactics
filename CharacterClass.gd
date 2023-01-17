@@ -4,6 +4,7 @@ class_name Character extends Node2D
 
 #----------PERSON----------
 #key, health, broken, armor
+var character_name = "blanko"
 var limbs_health = {
 	"HeadTop": [45, false, null],
 	"HeadEyes": [45, false, null],
@@ -29,6 +30,8 @@ var inventory = []
 var weapon_equiped = "none" #will refrence weaon object
 var armor_equiped = [] #will refrence armor objects
 var tile_position = []
+var diseases = [] #array of objects?
+var known_craftable_items = [] #this will include their own specialty items, as well as anything they find the blueprints for
 
 #----------SKILLS----------
 #bat, crowbar, ect
@@ -42,12 +45,14 @@ var skills_misc = []
 var race = "white"
 var size = []
 var gender = "male"
+var dirt_level = 0
 #ect
 
-#personalitys
+#----------PERSONALITIES----------
 var greedy = 75 #prob want in array
 
-#dialogs
+
+#----------DIALOGS----------
 #large array, array for story conversations with two sided input, the biggest array of which is the diffrent places that trigger it?, and inside each one of those is and array of diffrent sotrys, empty is zero for the area but they can have a couple for each location?
 #misc stories that arent location dependant that they just tell
 #stories that are backstory dependant, some of which the player can ask through dialog prompts
@@ -60,6 +65,20 @@ var greedy = 75 #prob want in array
 #for story conversations will want: person says lines, player (or whoever the conversation is dirrected at) gets chance to respond to options
 #["so then i said to her blah blah blah blah", [1, "so then what happend", "end conversation", "boring"], [2, "when after that...", "", "what do you mean boring?"], "blau blau blau blau blau", end of conversation]
 
+
+
+#----------CANDO----------
+#time, tile index, action
+var current_schedual = [["10:00", [23,23], "idk mop or something, maybe call to function"]]
+
+func create_character():
+	pass
+
+func take_items_from_storage(items):
+	pass
+
+func mop_area(tile):
+	pass
 
 func equip_weapon(index):
 	pass
