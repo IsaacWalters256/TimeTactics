@@ -1,0 +1,206 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tex/Sprites/TilesTestSheet.png" type="Texture" id=1]
+[ext_resource path="res://Tex/Sprites/TilesTestFloors.png" type="Texture" id=2]
+[ext_resource path="res://Tex/Sprites/TilesTestFill.png" type="Texture" id=3]
+[ext_resource path="res://NodesAndCodes/Tile0000000.tscn" type="PackedScene" id=4]
+
+[node name="TilesOut" type="Node2D"]
+
+[node name="Tile000000" type="Node2D" parent="."]
+position = Vector2( -64, -32 )
+
+[node name="Floor" type="Sprite" parent="Tile000000"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="WallSouth" type="Sprite" parent="Tile000000"]
+position = Vector2( 32, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="WallWest" type="Sprite" parent="Tile000000"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="Fill" type="Sprite" parent="Tile000000"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="WallEast" type="Sprite" parent="Tile000000"]
+position = Vector2( 32, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="WallNorth" type="Sprite" parent="Tile000000"]
+position = Vector2( 0, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="Roof" type="Sprite" parent="Tile000000"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="Tile000001" type="Node2D" parent="."]
+position = Vector2( 0, -32 )
+
+[node name="Floor" type="Sprite" parent="Tile000001"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="WallSouth" type="Sprite" parent="Tile000001"]
+position = Vector2( 32, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="WallWest" type="Sprite" parent="Tile000001"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="Fill" type="Sprite" parent="Tile000001"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="WallEast" type="Sprite" parent="Tile000001"]
+position = Vector2( 32, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="WallNorth" type="Sprite" parent="Tile000001"]
+position = Vector2( 0, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="Roof" type="Sprite" parent="Tile000001"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="Tile000002" type="Node2D" parent="."]
+position = Vector2( 64, -32 )
+
+[node name="Floor" type="Sprite" parent="Tile000002"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="WallSouth" type="Sprite" parent="Tile000002"]
+position = Vector2( 32, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="WallWest" type="Sprite" parent="Tile000002"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="Fill" type="Sprite" parent="Tile000002"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="WallEast" type="Sprite" parent="Tile000002"]
+position = Vector2( 32, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="WallNorth" type="Sprite" parent="Tile000002"]
+position = Vector2( 0, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="Roof" type="Sprite" parent="Tile000002"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="Tile000003" type="Node2D" parent="."]
+position = Vector2( 128, -32 )
+
+[node name="Floor" type="Sprite" parent="Tile000003"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="WallSouth" type="Sprite" parent="Tile000003"]
+position = Vector2( 32, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="WallWest" type="Sprite" parent="Tile000003"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="Fill" type="Sprite" parent="Tile000003"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="WallEast" type="Sprite" parent="Tile000003"]
+position = Vector2( 32, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+frame = 1
+
+[node name="WallNorth" type="Sprite" parent="Tile000003"]
+position = Vector2( 0, -32 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 6
+vframes = 3
+
+[node name="Roof" type="Sprite" parent="Tile000003"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 3
+
+[node name="Tile000004" parent="." instance=ExtResource( 4 )]

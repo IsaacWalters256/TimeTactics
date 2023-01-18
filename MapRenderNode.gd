@@ -2,7 +2,7 @@ extends Node2D
 
 
 var scroll_x = 0
-var zoom = 4
+var zoom = 1
 
 
 
@@ -17,16 +17,28 @@ func _ready():
 #func _process(delta):
 #	pass
 
+#[WallNorth, WallEast, WallSouth, WallWest, Floor, Roof, Fill, object, creature]
+
 func create_map():
-	for j in range(36/zoom + 2):
-		for i in range(32/zoom + 4):#this will have to depend on how zoomed in it is
-			var tile0 = load("res://NodesAndCodes/RenderPieces/RenderWall.tscn").instance()
-			tile0.position.x = self.position.x + (32 * zoom * i)
-			tile0.position.y = self.position.y + (16 * zoom * j - (32 * zoom))
-			tile0.scale.x = zoom
-			tile0.scale.y = zoom
+	var shifted = false
+	for j in range(40):
+		shifted = !shifted
+		for i in range(20):#this will have to depend on how zoomed in it is
+			var tile0 = load("res://NodesAndCodes/Tile0000000.tscn").instance()
+			if shifted == true:
+				tile0.position.x = self.position.x + (64 * zoom * i) - 64
+			else:
+				tile0.position.x = self.position.x + (64 * zoom * i) - 96
+			tile0.position.y = self.position.y + (16 * zoom * j)
+			
 			if j < get_node("MapStorageNode").map.size() && i < get_node("MapStorageNode").map[j].size():
-				tile0.frame = get_node("MapStorageNode").map[j][i][0]
+				tile0.get_node("WallNorth").frame = get_node("MapStorageNode").map[j][i][0]
+				tile0.get_node("WallEast").frame = get_node("MapStorageNode").map[j][i][1]
+				tile0.get_node("WallSouth").frame = get_node("MapStorageNode").map[j][i][2]
+				tile0.get_node("WallWest").frame = get_node("MapStorageNode").map[j][i][3]
+				tile0.get_node("Floor").frame = get_node("MapStorageNode").map[j][i][4]
+				tile0.get_node("Roof").frame = get_node("MapStorageNode").map[j][i][5]
+				tile0.get_node("Fill").frame = get_node("MapStorageNode").map[j][i][6]
 			#else:
 				#tile0.frame = 35
 			get_node("TileSprites").add_child(tile0)
